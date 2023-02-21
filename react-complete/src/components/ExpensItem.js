@@ -1,11 +1,16 @@
 import './ExpensItem.css'  // import css file
 
 function ExpenseItem(data) { // function component
-    const expanseDate = new Date(2021, 2, 28); // create date
-    const expenseTitle = 'Car Insurance'; // create title
-    const expenseAmount = 294.67;
+    const month = data.date.toLocaleString('en-US', {month: 'long'});
+    const year = data.date.getFullYear();
+    const day = data.date.toLocaleString('en-US', {day: '2-digit'});
+
     return (<div className="expense-item">
-        <div>{data.date.toUTCString()}</div>
+        <div>
+            <div>{month}</div>
+            <div>{year}</div>
+            <div>{day}</div>
+        </div>
         <div className="expense-item__description">
             <h2>{data.title}</h2>
         </div>
