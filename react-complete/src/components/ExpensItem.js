@@ -1,5 +1,5 @@
 import ExpansesDate from './ExpenseDate'; // import component
-import './ExpensItem.css'  // import css file
+import './ExpensItem.css';  // import css file
 
 function ExpenseItem(data) { // function component
 
