@@ -1,3 +1,9 @@
+* {
+    box-sizing: border-box;
+    margin: 5px 15px;
+    padding: 10px;
+}
+
 .expense-item {
     display: flex;
     justify-content: space-between;
