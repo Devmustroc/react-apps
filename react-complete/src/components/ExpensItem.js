@@ -2,7 +2,9 @@ import ExpansesDate from './ExpenseDate'; // import component
 import './ExpensItem.css';  // import css file
 
 function ExpenseItem(data) { // function component
-
+    const clickHandler = () => {
+        console.log("clicked");
+    }
     return (<div className="expense-item">
         <ExpansesDate date={data.date}/>
         <div className="expense-item__description">
@@ -10,6 +12,7 @@ function ExpenseItem(data) { // function component
         </div>
         <div className="expense-item__price">${data.amount}
         </div>
+        <button onClick={clickHandler}>Change Title</button>
     </div>);   // return JSX
 }
 
