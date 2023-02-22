@@ -4,7 +4,7 @@ import './ExpensItem.css';  // import css file
 function ExpenseItem(data) { // function component
     const clickHandler = () => {
         console.log("clicked");
-    }
+    };
     return (<div className="expense-item">
         <ExpansesDate date={data.date}/>
         <div className="expense-item__description">
