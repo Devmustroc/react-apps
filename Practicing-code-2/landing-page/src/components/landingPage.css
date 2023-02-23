@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    background-color: #d72380;
+}
+
+.landing {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),url("./images/landing.png") no-repeat center top;
+    background-size: cover;
+    animation: landingAnim 4s forwards;
+}
+
+@keyframes landingAnim {
+    0%,
+    50% {
+        clip-path: polygon(11% 9%, 93% 7%, 86% 49%, 95% 91%, 10% 93%, 4% 54%);
+    }
+    100% {
+        clip-path: polygon(7% 22%, 48% 5%, 99% 22%, 96% 79%, 10% 93%, 1% 56%);
+        background-position:  bottom;
+    }
+
+
+}
+
+.bg {
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    position: absolute;
+    top : 0;
+    left: 0;
+    z-index: 10;
+    transform-origin: top;
+    animation: bgAnim 2s forwards;
+}
+
+@keyframes bgAnim {
+    0%,
+    50% {
+        transform: scaleY(1);
+        background-color: #8a1d56;
+    }
+    100% {
+        transform: scaleY(0);
+        background-color: #a14c75;
+    }
+}
