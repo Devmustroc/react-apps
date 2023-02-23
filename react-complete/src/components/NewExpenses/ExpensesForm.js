@@ -2,32 +2,40 @@ import React, {useState} from 'react';
 import "./ExpenseForm.css";
 
 const ExpensesForm = () => {
-    // const [enteredTitle, setEnteredTiltle] = useState('');
-    // const [enteredDate, setEnteredDate] = useState('');
-    // const [enteredAmount, setEnteredAmount] = useState('');
-    const [userInput, setUserInput] = useState({
-        enteredTitle: '',  // This is the initial state
-        enteredDate: '',  // This is the initial state
-        enteredAmount: '' // This is the initial state
-    })  // object destructuring for the state using useState hook
+    const [enteredTitle, setEnteredTiltle] = useState('');
+    const [enteredDate, setEnteredDate] = useState('');
+    const [enteredAmount, setEnteredAmount] = useState('');
+    // const [userInput, setUserInput] = useState({
+    //     enteredTitle: '',  // This is the initial state
+    //     enteredDate: '',  // This is the initial state
+    //     enteredAmount: '' // This is the initial state
+    // })  // object destructuring for the state using useState hook
     const titleChangeHandler = (event) => {
-        setUserInput({
-            ...userInput,  // spread operator for copying the previous state
-            enteredTitle: event.target.value  // This is the new state
-        })
+        setEnteredTiltle(event.target.value);
+        // setUserInput({
+        //     ...userInput,  // spread operator for copying the previous state
+        //     enteredTitle: event.target.value  // This is the new state
+        // })
+        // setUserInput((prevState) => {
+        //     return {...prevState, enteredTitle: event.target.value}
+        // });
     };
     const amountChangeHandler = (event) => {
-        setUserInput({
-            ...userInput, // spread operator for copying the previous state
-            enteredAmount: event.target.value // This is the new state
-        })
+        setEnteredAmount(event.target.value);
+        // setUserInput({
+        //     ...userInput, // spread operator for copying the previous state
+        //     enteredAmount: event.target.value // This is the new state
+        // })
+        // setUserInput((prevState) => {
+        //     return {...prevState, eneteredAmount: event.target.value}
+        // })
     }
 
     const dateChangeHandler = (event) => {
-        setUserInput({
-            ...userInput,  // spread operator for copying the previous state
-            enteredDate: event.target.value // This is the new state
-        })
+        setEnteredDate(event.target.value);
+        // setUserInput((prevState) => {
+        //     return {...prevState, enteredDate: event.target.date}
+        // })
     }
     return (<form>
         <div className="new-expense__controls">
