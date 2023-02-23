@@ -1,5 +1,5 @@
 import ExpenseItem from './ExpensItem';  // import component
-import './Expenses.css';  // import css file
+import '../UI/Expenses.css';  // import css file
 
 function Expenses(data) { // function component
     return (
