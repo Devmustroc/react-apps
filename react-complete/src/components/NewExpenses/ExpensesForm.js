@@ -1,5 +1,5 @@
 import React from 'react';
-import '../UI/NewExpense.css';
+import "./ExpenseForm.css";
 
 const ExpensesForm = (props) => {
     return (
