@@ -109,7 +109,7 @@ html {
 .square {
     width: 14rem;
     aspect-ratio: 1;
-    background-color: #fff;
+    background-color: #f50606;
     border-radius: 2rem;
     left: 44rem;
     box-shadow: 0 0 0.2rem #555;
